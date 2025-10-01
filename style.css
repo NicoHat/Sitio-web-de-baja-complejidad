@@ -1,0 +1,699 @@
+/* Estilos generales */
+body {
+    font-family: 'Lora', serif;
+    background-color: #1a1a1a; /* Gris carbón oscuro */
+    color: #e0e0e0; /* Gris claro para el texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: #1f2023; /* Un poco más claro que el fondo */
+    color: #c5b358; /* Dorado élfico */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #c5b358; /* Borde dorado fino */
+    position: relative; /* Necesario para posicionar el menú hamburguesa */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Navegación de Escritorio */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #c5b358;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    padding: 10px 0;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    color: #c5b358;
+    padding: 10px 15px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1f2023;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+    border: 1px solid #c5b358;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenido Principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.dropdown-content a {
+    color: #c5b358;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #28282b;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Secciones de la página de inicio */
+.home-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #c5b358;
+    padding-bottom: 10px;
+}
+
+.story-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.story-card {
+    background-color: #28282b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    margin: 15px 0 10px;
+}
+
+.story-card p {
+    padding: 0 20px;
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c5b358;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e0d186;
+    color: #1a1a1a;
+}
+/* Sección Hero (Bienvenida) */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    font-size: 2.2rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 25px;
+    border: 2px solid #c5b358;
+}
+
+/* Secciones de contenido (LOTR, Hobbit, ROP) */
+.content-section {
+    background-color: #28282b; /* Gris oscuro para secciones */
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.content-section h2 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    border-bottom: 1px solid #c5b358;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.content-section img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #c5b358;
+}
+
+/* Estilos para las páginas de las trilogías (LOTR, Hobbit) */
+.trilogy-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #c5b358;
+    padding-bottom: 15px;
+}
+
+.movie-section {
+    display: flex;
+    gap: 30px;
+    background-color: #28282b;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    margin-bottom: 40px;
+    align-items: flex-start; /* Alinea los items al inicio */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+    flex: 0 0 250px; /* No crece, no se encoge, base de 250px */
+}
+
+.movie-poster img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #c5b358;
+}
+
+.movie-details {
+    flex: 1;
+}
+
+.movie-details h3 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.trailer-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0 40px 0; /* Margen superior e inferior */
+    border: 2px solid #c5b358;
+    border-radius: 8px;
+}
+
+.trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para la sinopsis de cada temporada en ROP */
+.season-synopsis {
+    background-color: #28282b;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.season-synopsis p {
+    text-align: justify;
+}
+
+/* Estilos para la página de la serie (ROP) */
+.series-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #c5b358;
+    padding-bottom: 15px;
+}
+
+.season-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #e0e0e0;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px; /* Añade espacio después de la grilla de episodios */
+}
+
+.episode-card {
+    background-color: #28282b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-color: #c5b358;
+}
+
+.episode-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.episode-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Para que el contenido ocupe el espacio */
+}
+
+.episode-info h4 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.episode-info p {
+    flex-grow: 1; /* Empuja el score hacia abajo */
+    margin-bottom: 20px;
+}
+
+.imdb-score {
+    text-align: right;
+    font-style: italic;
+    color: #c5b358;
+}
+
+ul {
+    list-style-type: '🕈 '; /* Un pequeño ícono como viñeta */
+    padding-left: 20px;
+}
+
+/* Estilos para el menú hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.hamburger .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #e0e0e0;
+}
+/* Estilos para la galería */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    border-radius: 8px;
+    border: 2px solid #c5b358;
+    cursor: pointer;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+/* Estilo para las imágenes que activan el lightbox */
+.lightbox-trigger {
+    cursor: pointer;
+}
+
+/* Estilos para la página de Personajes */
+.character-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.character-card {
+    background-color: #28282b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden; /* Para que la imagen no se salga del borde redondeado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-bottom: 2px solid #c5b358;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-info h3 {
+    font-family: 'Cinzel', serif;
+    margin-top: 0;
+    color: #c5b358;
+}
+
+.character-info p {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* Estilos para los grupos de personajes */
+.character-group {
+    margin-bottom: 50px;
+}
+
+.group-title {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    border-bottom: 1px solid #c5b358;
+    padding-bottom: 10px;
+}
+
+/* Botón centrado para secciones */
+.section-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+/* Estilos para el Formulario de Contacto */
+.contact-form {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #c5b358;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #c5b358;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-family: 'Lora', serif;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    resize: none; /* Evita que el usuario pueda cambiar el tamaño del textarea */
+}
+
+.submit-btn {
+    background-color: #c5b358;
+    color: #1a1a1a;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e0d186;
+}
+
+/* Alineación para la sección de contacto */
+.contact-section {
+    align-items: stretch; /* Hace que las columnas tengan la misma altura */
+}
+
+/* Estilos para el mapa */
+.map-content {
+    flex: 1.5; /* Darle un poco más de espacio que al formulario */
+    display: flex;
+    flex-direction: column;
+}
+
+.map-content h2 {
+    font-family: 'Cinzel', serif;
+    color: #c5b358;
+    margin-top: 0;
+}
+
+.map-content iframe {
+    border-radius: 8px;
+    border: 2px solid #c5b358;
+    flex-grow: 1; /* Hace que el mapa ocupe el espacio vertical disponible */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #1f2023;
+    color: #aaa;
+    border-top: 1px solid #444;
+}
+
+/* Estilos para el Lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 85vh; /* 85% de la altura de la pantalla */
+    max-width: 90vw; /* 90% del ancho de la pantalla */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: translate(-50%, -50%) scale(1)}
+}
+
+#caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev-btn, .next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Diseño Responsivo para móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* Ocultar la navegación de escritorio y mostrar la hamburguesa */
+    nav {
+        display: none; /* Ocultar por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1f2023;
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        z-index: 10;
+        border-top: 1px solid #8c784a;
+    }
+
+    /* Clase que activa el menú en móvil */
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown .dropbtn { padding: 15px; width: 100%; text-align: center; }
+    .dropdown-content { position: static; box-shadow: none; border: none; background-color: #28282b; }
+
+    .content-section, .content-section.reverse {
+        flex-direction: column;
+    }
+
+    .movie-section {
+        flex-direction: column;
+    }
+
+    .contact-section .text-content {
+        flex-basis: 100%; /* Ocupa todo el ancho en móvil */
+    }
+
+    /* Ajustes para las tarjetas de personajes en la página de inicio */
+    .home-section .character-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+}
